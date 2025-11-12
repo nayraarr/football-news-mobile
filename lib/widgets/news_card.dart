@@ -3,6 +3,7 @@ import 'package:football_news/screens/newslist_form.dart';
 // Import drawer widget
 import 'package:football_news/widgets/left_drawer.dart';
 import 'package:football_news/screens/menu.dart';
+import 'package:football_news/screens/news_entry_list.dart';
 
 class ItemCard extends StatelessWidget {
   // Menampilkan kartu dengan ikon dan nama.
@@ -37,6 +38,13 @@ class ItemCard extends StatelessWidget {
                 MaterialPageRoute(
                   builder: (context) => NewsFormPage(),
                 ));
+          } else if (item.name == "See Football News") {
+            Navigator.push(
+              context,
+              MaterialPageRoute(
+                  builder: (context) => const NewsEntryListPage()
+              ),
+            );
           }
         },
         // Container untuk menyimpan Icon dan Text
